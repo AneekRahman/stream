@@ -1,0 +1,233 @@
+<RelativeLayout
+    android:id="@+id/main_holder"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingTop="2dp"
+    android:paddingRight="2dp"
+    android:paddingLeft="2dp">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="4dp"
+        app:cardBackgroundColor="#000"
+        app:cardElevation="0dp">
+
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/playerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:surface_type="texture_view"
+            app:resize_mode="zoom"
+            app:controller_layout_id="@layout/regular_post_main_player_controller"
+            android:animateLayoutChanges="true"/>
+
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Just a stroll through the woods"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:shadowColor="#4e4e4e"
+        android:shadowDy="1"
+        android:shadowDx="1"
+        android:shadowRadius="3"
+        android:clickable="true"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="6dp"
+        android:layout_above="@id/user_identity_holder"
+        android:singleLine="true"
+        android:fontFamily="@font/varela_round_regular"/>
+
+    <LinearLayout
+        android:id="@+id/user_identity_holder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginBottom="20dp"
+        android:layout_above="@id/views_count"
+        android:gravity="center_vertical"
+        android:clickable="true">
+
+        <ImageView
+            android:id="@+id/regular_post_dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/post_user_border_bg"
+            android:padding="2dp"/>
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aneek Rahman"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:shadowColor="#4e4e4e"
+            android:shadowDy="1"
+            android:shadowDx="1"
+            android:shadowRadius="3"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:singleLine="true"
+            android:fontFamily="@font/varela_round_regular"/>
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            app:srcCompat="@drawable/ic_verified_icon"
+            android:visibility="visible" />
+
+        <ImageView
+            android:layout_width="4dp"
+            android:layout_height="4dp"
+            app:srcCompat="@drawable/ic_dot_icon"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:id="@+id/time_stamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:34PM"
+            android:textColor="#fff"
+            android:shadowColor="#4e4e4e"
+            android:shadowDy="1"
+            android:shadowDx="1"
+            android:shadowRadius="3"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/varela_round_regular"
+            android:layout_marginLeft="10dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/views_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="298k views"
+        android:textColor="#fff"
+        android:shadowColor="#4e4e4e"
+        android:shadowDy="1"
+        android:shadowDx="1"
+        android:shadowRadius="3"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/varela_round_regular"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="2dp"
+        android:layout_above="@id/counts_holder" />
+
+    <LinearLayout
+        android:id="@+id/counts_holder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginLeft="20dp">
+
+        <TextView
+            android:id="@+id/heart_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2.5k hearts"
+            android:textColor="#fff"
+            android:shadowColor="#4e4e4e"
+            android:shadowDy="1"
+            android:shadowDx="1"
+            android:shadowRadius="3"
+            android:layout_gravity="center_horizontal"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/varela_round_regular"/>
+
+        <TextView
+            android:id="@+id/comment_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4k comments"
+            android:textColor="#fff"
+            android:shadowColor="#4e4e4e"
+            android:shadowDy="1"
+            android:shadowDx="1"
+            android:shadowRadius="3"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/varela_round_regular"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/post_interaction_button_holder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/heart_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            app:srcCompat="@drawable/ic_heart_filled"/>
+
+        <ImageView
+            android:id="@+id/comment_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            app:srcCompat="@drawable/ic_comments_icon"
+            android:layout_marginLeft="6dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/play_pause_holder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:layout_marginLeft="14dp"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/play_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/ic_play_icon"
+            android:padding="7dp"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/pause_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/ic_pause_icon"
+            android:padding="7dp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/fullscreen_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        app:srcCompat="@drawable/ic_fullscreen_icon"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="17dp"
+        android:padding="7dp"/>
+
+</RelativeLayout>

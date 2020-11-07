@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="@drawable/exoplayer_gradient_bg"
+        android:layout_alignParentBottom="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="12dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="54dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginBottom="18dp">
+
+        <TextView
+            android:id="@+id/exo_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2:49"
+            android:textColor="#fff"
+            android:shadowColor="#4e4e4e"
+            android:shadowDy="1"
+            android:shadowDx="1"
+            android:shadowRadius="3"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/varela_round_regular"
+            android:layout_gravity="center"
+            android:layout_marginBottom=".6dp"
+            android:layout_marginRight="6dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:background="@drawable/exo_player_seek_bar_bg"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="7.8dp"
+                android:layout_marginRight="7.8dp"/>
+
+            <com.stream.app.Classes.MySeekBar
+                android:id="@id/exo_progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bar_height="6dp"
+                app:buffered_color="#b3ffffff"
+                app:unplayed_color="@android:color/transparent"
+                app:played_color="#fff"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
